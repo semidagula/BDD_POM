@@ -1,26 +1,27 @@
-from behave import given, then, when, fixture
+from behave import given, then, when
 
+from Pages.home_page import HomePage
 
-@fixture(u'Logo is displayed')
+@when(u'Logo is displayed')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When Logo is displayed')
+    print(u'STEP: When Logo is displayed')
     page = HomePage(context.driver)
     assert page.get_logo()
 
 
-@given(u'Go to Form Page')
+@given(u'Go to form page')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Given Go to Form Page')
+    print(u'STEP: Given Go to form page')
 
 
-@when(u'I enter first name "Ana"')
+@when(u'I enter first name "Andreea"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I enter first name "Ana"')
+    raise NotImplementedError(u'STEP: When I enter first name "Andreea"')
 
 
-@when(u'I enter first name "Banana"')
+@when(u'I enter first name "Cara"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I enter first name "Banana"')
+    raise NotImplementedError(u'STEP: When I enter first name "Cara"')
 
 
 @when(u'click submit')
@@ -28,19 +29,9 @@ def step_impl(context):
     raise NotImplementedError(u'STEP: When click submit')
 
 
-@then(u'A success message should be displayed.')
+@then(u'a success message should be displayed')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then A success message should be displayed.')
-
-
-@when(u'I enter first name "Ileana"')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When I enter first name "Ileana"')
-
-
-@when(u'I enter first name "Cosanzeana"')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When I enter first name "Cosanzeana"')
+    raise NotImplementedError(u'STEP: Then a success message should be displayed')
 
 
 @when(u'I enter first name "Ion"')
@@ -53,27 +44,32 @@ def step_impl(context):
     raise NotImplementedError(u'STEP: When I enter first name "Creanga"')
 
 
-@then(u'The Form Page should be displayed')
+@when(u'I enter first name "Ileana"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then The Form Page should be displayed')
+    raise NotImplementedError(u'STEP: When I enter first name "Ileana"')
 
 
-@when(u'go to home page')
+@when(u'I enter first name "Cosanzeana"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When go to home page')
+    raise NotImplementedError(u'STEP: When I enter first name "Cosanzeana"')
 
 
-@then(u'the home page should be displayed')
+@then(u'The form should be displayed')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then the home page should be displayed')
+    raise NotImplementedError(u'STEP: Then The form should be displayed')
 
 
-@when(u'logo is displayed')
+@when(u'Go to home page')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When logo is displayed')
+    raise NotImplementedError(u'STEP: When Go to home page')
+
+
+@then(u'The home page be displayed')
+def step_impl(context):
+    raise NotImplementedError(u'STEP: Then The home page be displayed')
 
 
 @then(u'I should see "{keyword}"')
 def step_impl(context, keyword):
-    raise NotImplementedError(u'STEP: Then I should see "Welcome to Formy"')
-    assert keyword in context.driver.page
+    print(u'STEP: Then I should see "Welcome to Formy"')
+    assert keyword in context.driver.page_source

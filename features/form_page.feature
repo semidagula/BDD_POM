@@ -5,7 +5,8 @@ Feature: Add a content to the form
 
   Background:
     When Logo is displayed
-@regression
+
+  @regression
   Scenario Outline: Populate multiple fields
     Given Go to Form Page
     When I enter first name "<first_name>"
